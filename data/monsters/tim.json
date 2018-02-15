@@ -1,0 +1,32 @@
+{
+  "name": "Tim the Wizard",
+  "image": "https://i.imgur.com/muX6mfe.png",
+  "max_hp": 50,
+  "quotes": ["This is quote one!", "Now for a second quote!"],
+
+  "abilities": [
+    {
+      "name": "Ability1",
+      "script": "ability_1.py",
+      "quote": "I'm using ability 1!"
+    },
+    {
+      "name": "Ability2",
+      "script": "ability_2.py",
+      "quote": "I'm using ability 2!"
+    }
+  ],
+
+  "player_actions": [
+    {
+      "name": "Action1",
+      "emoji_icon": "BLACK RIGHTWARDS ARROW",
+      "script": "action_1.py"
+    },
+    {
+      "name": "Action2",
+      "emoji_icon": "LEFTWARDS BLACK ARROW",
+      "script": "action_2.py"
+    }
+  ]
+}

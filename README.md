@@ -3,6 +3,11 @@ An RPG Discord bot.
 
 ## Rough Ideas - To be organized and implemented later
 
+### Current Ideas and tinkerings
+* Can edit monster quotes by adding a `content` section to the send message
+* Need a way to abstract building monsters via a JSON file
+* Potential: complex logic can be contained in scripts which can be referenced by the JSON file
+
 ### Key Game Concepts
 * Server-wide combat, big bosses, small enemies, complex interactions. More than just DPSing something down.
 * Aggro mechanics
