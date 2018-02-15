@@ -26,8 +26,7 @@ async def on_message(message):
     :return:
     """
     print(message.content)
-    if message.content == '!startest':
-        print("In start test.")
+    if message.content == '!test':
         embed_message = discord.Embed(title='Embed Title', color=discord.Color.red())
         embed_message.add_field(name='HP', value='50/50')
         embed_message.add_field(name='Target', value='Bob')
