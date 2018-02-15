@@ -1,25 +1,25 @@
 import asyncio
 import discord
 import traceback
+import json
 
 
 class RaidMonster:
-    def __init__(self, name, image, current_hp, max_hp, current_target, message_id):
+    def __init__(self, filename):
         """
         A representation of a RaidBoss monster
-        :param name:
-        :param image:
-        :param current_hp:
-        :param max_hp:
-        :param current_target:
-        :param message_id: The Discord message that the monster is associated with
+        :param filename: name of the monster file to load
         """
-        self.name = name
-        self.image = image
-        self.current_hp = current_hp
-        self.max_hp = max_hp
-        self.current_target = current_target
-        self.message_id = message_id
+        # TODO: create a list of Discord Emojis to react with and store in this object rather than doing it later.
+        # Iterate over this list and add all reactions
+        monster = json.load(open('data/monsters/' + filename))
+
+        self.name = monster['name']
+        self.image = monster['image']
+        self.current_hp = monster['max_hp']
+        self.max_hp = monster['max_hp']
+        self.current_target = None
+        self.message_id = None
 
 
 class CombatManager:
@@ -49,7 +49,7 @@ class CombatManager:
 
     @asyncio.coroutine
     async def start_combat(self):
-        monster = RaidMonster('Tim', 'https://i.imgur.com/muX6mfe.png', 50, 50, None, None)
+        monster = RaidMonster('tim.json')
 
         embed_message = self.build_monster_embed(monster)
 
